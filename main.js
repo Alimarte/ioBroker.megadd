@@ -1574,7 +1574,7 @@ function restApi(req, res) {
 		///if (values.ib)
                 adapter.sendTo('megadd.' + device, 'send', {pt: parseInt(values.pt, 10), val: values.ib});
 		///if (values.wg)
-                adapter.sendTo('megadd.' + device, 'send', {pt: parseInt(values.pt, 10), val: values.wg});    /*A*/
+                //adapter.sendTo('megadd.' + device, 'send', {pt: parseInt(values.pt, 10), val: values.wg});    /*A*/
                 res.writeHead(200, {'Content-Type': 'text/html'});
                 res.end('OK', 'utf8');
             } else {
@@ -1586,7 +1586,7 @@ function restApi(req, res) {
 				///if (values.ib)
                                 adapter.sendTo(id, 'send', {pt: parseInt(values.pt, 10), val: values.ib});
 				///if (values.wg)
-                                adapter.sendTo(id, 'send', {pt: parseInt(values.pt, 10), val: values.wg});  /*A*/   
+                                //adapter.sendTo(id, 'send', {pt: parseInt(values.pt, 10), val: values.wg});  /*A*/   
                                 res.writeHead(200, {'Content-Type': 'text/html'});
                                 res.end('OK', 'utf8');
                                 return;
