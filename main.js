@@ -14,7 +14,7 @@
  *      For digital ports only 0, 1 and 2 (toggle) are allowed, for analog ports the values from 0 to 255 are allowed
  *
  *      The device can report the changes of ports to some web server in form
- *      http://ioBroker:8090/?pt=6  , where 6 is the port number     TEST
+ *      http://ioBroker:8090/?pt=6  , where 6 is the port number     TEST2
  *
  */
 /* jshint -W097 */// jshint strict:false
