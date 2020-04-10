@@ -1618,7 +1618,7 @@ function restApi(req, res) {
             } else if (adapter.config.ports[_port].pty == 3 && adapter.config.ports[_port].d == 4) {
                 // process iButton
                 adapter.setState(adapter.config.ports[_port].id, values.ib, true);
-	    } else if (adapter.config.ports[_port].pty == 3 && adapter.config.ports[_port].d == 5) { 
+	    } else if (adapter.config.ports[_port].pty == 3 && adapter.config.ports[_port].d == 6) { 
                 // process WG-26  /*A*/
                 adapter.setState(adapter.config.ports[_port].id, values.wg, true);	    
             } else {
