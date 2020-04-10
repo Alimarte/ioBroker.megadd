@@ -1572,7 +1572,7 @@ function restApi(req, res) {
             // Try to find name of the instance
             if (parseInt(device, 10) == device) {
 		///if (values.ib)
-                adapter.sendTo('megadd.' + device, 'send', {pt: parseInt(values.pt, 10), val: values.ib});
+                //adapter.sendTo('megadd.' + device, 'send', {pt: parseInt(values.pt, 10), val: values.ib});
 		///if (values.wg)
                 adapter.sendTo('megadd.' + device, 'send', {pt: parseInt(values.pt, 10), val: values.wg});    /*A*/
                 res.writeHead(200, {'Content-Type': 'text/html'});
