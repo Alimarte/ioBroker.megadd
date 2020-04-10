@@ -1572,7 +1572,7 @@ function restApi(req, res) {
             // Try to find name of the instance
             if (parseInt(device, 10) == device) {
 		///if (values.ib)
-                //adapter.sendTo('megadd.' + device, 'send', {pt: parseInt(values.pt, 10), val: values.ib});
+                //adapter.sendTo('megadd.' + device, 'send', {pt: parseInt(values.pt, 10), val: values.ib}); /*A*/
 		///if (values.wg)
                 adapter.sendTo('megadd.' + device, 'send', {pt: parseInt(values.pt, 10), val: values.wg});    /*A*/
                 res.writeHead(200, {'Content-Type': 'text/html'});
@@ -1584,9 +1584,9 @@ function restApi(req, res) {
                         for (var id in arr) {
                             if (arr[id].native.name === device) {
 				///if (values.ib)
-                                adapter.sendTo(id, 'send', {pt: parseInt(values.pt, 10), val: values.ib});
+                                //adapter.sendTo(id, 'send', {pt: parseInt(values.pt, 10), val: values.ib}); /*A*/
 				///if (values.wg)
-                                //adapter.sendTo(id, 'send', {pt: parseInt(values.pt, 10), val: values.wg});  /*A*/   
+                                adapter.sendTo(id, 'send', {pt: parseInt(values.pt, 10), val: values.wg});  /*A*/   
                                 res.writeHead(200, {'Content-Type': 'text/html'});
                                 res.end('OK', 'utf8');
                                 return;
@@ -1619,7 +1619,7 @@ function restApi(req, res) {
                 // process iButton
                 adapter.setState(adapter.config.ports[_port].id, values.ib, true);
 	    } else if (adapter.config.ports[_port].pty == 3 && adapter.config.ports[_port].d == 6) { 
-                // process WG-26  /*A*/
+                // process WG-26
                 adapter.setState(adapter.config.ports[_port].id, values.wg, true);	    
             } else {
                 adapter.log.debug('reported new value for port ' + _port + ', request actual value');
